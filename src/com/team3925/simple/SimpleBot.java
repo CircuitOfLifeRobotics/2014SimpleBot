@@ -38,7 +38,7 @@ public class SimpleBot extends SimpleRobot {
     public void operatorControl() {
         
         while (this.isEnabled() && this.isOperatorControl()) {
-            drive.arcadeDrive(xbox);
+            drive.arcadeDrive(xbox.getRawAxis(2), xbox.getRawAxis(4));
             
             // 20 updates a second
             Timer.delay(0.05);
